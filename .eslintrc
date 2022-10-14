@@ -1,0 +1,26 @@
+{
+  "extends": "eslint-config-umi",
+  "globals": {
+    "HOST_ENV": true
+  },
+  "plugins": [
+    "react-hooks",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    "prettier/prettier": "error"
+    /*"react-hooks/rules-of-hooks": "error", // 检查 Hook 的规则
+    "react-hooks/exhaustive-deps": "warn" // 检查 effect 的依赖*/
+  }
+}

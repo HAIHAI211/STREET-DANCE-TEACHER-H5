@@ -1,0 +1,65 @@
+.calendar-header {
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-center {
+    text-align: center;
+    .title,
+    .next-month {
+      margin-left: 20px;
+    }
+    .title {
+      font-size: 28px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #333333;
+      line-height: 36px;
+    }
+    .prev-month,
+    .next-month {
+      cursor: pointer;
+      color: #00a7ff;
+    }
+  }
+  .unfold-fewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 124px;
+    height: 40px;
+    background: #f7f7fb;
+    border-radius: 20px;
+    .unfold-fewer-txt {
+      font-size: 26px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.25);
+      line-height: 36px;
+    }
+    .unfold-ico,
+    .fewer-ico {
+      width: 16px;
+      height: 17px;
+      margin-left: 8px;
+      background: url("https://filecdn.ailecheng.com/20221010/eb54c4b7653076e82b7280371aa14b53.png")
+        no-repeat;
+      background-size: 276px 256px;
+    }
+    .unfold-ico {
+      background-position: -215px -137px;
+    }
+    .fewer-ico {
+      background-position: -237px -137px;
+    }
+  }
+}
