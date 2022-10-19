@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: path.join(__dirname, "../src/index.tsx"), // 入口文件
@@ -23,5 +24,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.tsx', '.ts']
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../public/index.html'),
+      inject: true, // 自动注入静态资源
+    })
+  ]
 };
