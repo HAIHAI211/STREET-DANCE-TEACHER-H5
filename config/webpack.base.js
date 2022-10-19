@@ -24,6 +24,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /.(css|less)$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
+      }
     ],
   },
   resolve: {
