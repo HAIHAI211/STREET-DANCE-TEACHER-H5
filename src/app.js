@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import RouterConfig from "./router/index.js";
 import { getAppToken } from "./services";
-import store from "./store";
+import { dataflowProvider } from "./hooks/use-model/runtime";
+// import store from "./store";
 import "./styles/index.less";
 
 const getAppTokenFn = () => {
@@ -31,10 +32,11 @@ if (!AppToken) {
     getAppTokenFn();
   }
 }
-store.dispatch({ type: "GET_APP_GLOBAL" });
+// store.dispatch({ type: "GET_APP_GLOBAL" });
 ReactDOM.render(
-  <Provider store={store}>
-    <RouterConfig />
-  </Provider>,
+  // <Provider store={store}>
+  //   <RouterConfig />
+  // </Provider>,
+  dataflowProvider(<RouterConfig />),
   document.getElementById("root")
 );
