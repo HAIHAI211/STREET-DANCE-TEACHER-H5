@@ -17,7 +17,7 @@ module.exports = {
     rules: [
       {
         test: /.(ts|tsx)$/, // 匹配ts和tsx
-        use: 'babel-loader'
+        use: "babel-loader",
         // use: {
         //   loader: "babel-loader",
         //   options: {
@@ -43,6 +43,42 @@ module.exports = {
       {
         test: /.(css|less)$/,
         use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
+      },
+      {
+        test: /.(png|jpg|jpeg|gif|svg)$/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024, // 小于10kb转base64
+          },
+        },
+        generator: {
+          filename: "static/images/[name][ext]", // 文件输出目录与命名
+        },
+      },
+      {
+        test: /.(woff2?|eot|ttf|otf)$/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024, // 小于10kb转base64
+          },
+        },
+        generator: {
+          filename: "static/fonts/[name][ext]",
+        },
+      },
+      {
+        test: /.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024,
+          },
+        },
+        generator: {
+          filename: "static/media/[name][ext]",
+        },
       },
     ],
   },
