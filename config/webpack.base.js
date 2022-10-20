@@ -94,4 +94,7 @@ module.exports = {
       "process.env.BASE_ENV": JSON.stringify(process.env.BASE_ENV),
     }),
   ],
+  cache: {
+    type: "filesystem",
+  },
 };
