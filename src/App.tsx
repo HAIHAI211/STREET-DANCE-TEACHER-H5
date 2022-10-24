@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./App.less";
-import largeImg from "./assets/imgs/10001-nights.png";
-import smallImg from "./assets/imgs/wechat.png";
+import "@/App.less"
+import largeImg from "@/assets/imgs/10001-nights.png";
+import smallImg from "@/assets/imgs/wechat.png";
 
 export default function App() {
   const [count, setCounts] = useState("");
@@ -10,6 +10,7 @@ export default function App() {
       <h1>STREET DANCE TEACHER H5</h1>
       <img src={largeImg} alt="大于10kb的图片" />
       <img src={smallImg} alt="小于10kb的图片" />
+      <div className={'bg'}></div>
       <h2>webpack5+react+ts</h2>
       <p>1. 受控组件</p>
       <input
